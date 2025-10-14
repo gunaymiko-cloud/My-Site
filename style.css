@@ -29,3 +29,31 @@ iframe {
   display: block;
   margin: 10px auto;
 }
+
+.hero {
+  /* Убираем градиент, добавляем фон */
+  background-image: url(images/Снимок\ экрана\ 2025-10-12\ 152338.png);
+  background-size: cover;        /* Картинка покрывает всю секцию */
+  background-position: center;   /* Центрируем изображение */
+  background-repeat: no-repeat;  /* Не повторяем */
+  color: white;                  /* Белый текст для контраста */
+  padding: 150px 0;
+  text-align: center;
+}
+
+/* Добавим полупрозрачный затемняющий слой (опционально, но красиво) */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Чёрный с прозрачностью */
+  z-index: -1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
